@@ -8,6 +8,16 @@ function updateTimeAndDate() {
     } else if (hours === 0) {
         hours = 24;
     }
+    //if want 12 hr and am/pm 
+    /*
+    
+     let amPm = hours >= 12 ? 'PM' : 'AM';
+    if (hours > 12) {
+        hours -= 12;
+    } else if (hours === 0) {
+        hours = 12;
+    }
+    */
     let timeStr = hours.toString().padStart(2, '0') + minutes;
     if (timeStr.startsWith('0')) {
         timeStr = ' ' + timeStr.slice(1);
